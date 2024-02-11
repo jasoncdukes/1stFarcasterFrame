@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vote Recorded</title>    
+        <meta property name="fc:frame" content="vNext" />
+        <meta property name="fc:frame:image" content="https://drive.google.com/file/d/11-uVqxopXALJJe-l7IIWQpUEz2QBKamb/view?usp=sharing" />
+        <meta property name="fc:frame:button:1" content="BTC" />
+        <meta property name="fc:frame:button:2" content="ETH" />
+        <meta property name="fc:frame:button:3" content="SOL" />
+        <meta property name="fc:frame:button:4" content="TRX" />
+    </head>
+  </html>
+  
+    <script>
+      function showResult(you can only HODL one) {
+        // Hide buttons after voting
+        document.getElementById('buttons').style.display = 'none';
+        
+        // Display the corresponding crypto logo
+        var imageUrl = '';
+        switch(crypto) {
+          case 'BTC':
+            imageUrl = 'https://drive.google.com/file/d/13EabSThxf094r-uJP82jVI3KbnuQTu_7/view?usp=sharing';
+            break;
+          case 'ETH':
+            imageUrl = 'https://drive.google.com/file/d/1x7XeiTidtqsEiEm0imMUiOvcssVl2pYd/view?usp=sharing';
+            break;
+          case 'SOL':
+            imageUrl = 'https://drive.google.com/file/d/1uXu4shnJPU1BgA7briCwhnQrXwUEyNEP/view?usp=sharing';
+            break;
+          case 'TRX':
+            imageUrl = 'https://drive.google.com/file/d/1E_sEFWz7ujJvdHfNTpS6lp7HtTGPVaxx/view?usp=sharing';
+            break;
+          // 
+        }
+          document.getElementById('resultImage').src = imageUrl;
+          document.getElementById('result').style.display = 'block';
+        }
+      </script>
+    </head>
+  <body>
+
+<div id="buttons">
+  <button onclick="showResult('BTC')">BTC</button>
+  <button onclick="showResult('ETH')">ETH</button>
+  <button onclick="showResult('SOL')">SOL</button>
+  <button onclick="showResult('TRX')">TRX</button>
+</div>
+
+<div id="result" style="display:none;">
+  <img id="resultImage" src="" alt="Crypto Logo">
+</div>
+
+  </body>
+</html>
